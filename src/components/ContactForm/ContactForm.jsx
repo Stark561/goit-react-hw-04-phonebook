@@ -12,7 +12,7 @@ function ContactForm({ contacts, saveContacts }) {
   const fieldIdNumber = nanoid();
 
   const checkContactName = () => {
-    return contacts.some(el => el.name === name);
+    return contacts.some(el => el.name.toLowerCase() === name.toLowerCase());
   };
 
   const onChange = e => {
